@@ -61,14 +61,11 @@ const userSchema = new mongoose.Schema({
 		} 
 
 	}],
-	private_friends:[{id:{
-		type:String,
-		required:true,
-	}}],
-	protected_friends:[{id:{
-		type:String,
-		required:true,
-	}}]
+	private_friends:[
+		String
+	],
+	protected_friends:[
+		String]
 
 	
 
