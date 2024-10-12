@@ -5,10 +5,11 @@ exports.Private_Friend= async (req, res) => {
         //fetch data from req body 
         const {_id,id} = req.body;
      
-        const udpatedfriend = await account.findByIdAndUpdate(_id, {$push:{private_friends: id} }, {new :true})
-     
+        const udpatedfriend = await account.findByIdAndUpdate(id, {$push:{private_friends: _id} }, {new :true})
+        const udpatedfriend1 = await account.findByIdAndUpdate(_id, {$push:{protected_friends: id} }, {new :true})
         res.json({
             post:udpatedfriend,
+            post1:udpatedfriend1,
         });
 
     }
@@ -27,7 +28,7 @@ exports.Protected_Friend= async (req, res) => {
         //fetch data from req body 
         const {_id,id} = req.body;
      
-        const udpatedfriend = await account.findByIdAndUpdate(id, {$push:{protected_friends: {_id}} }, {new :true})
+        const udpatedfriend = await account.findByIdAndUpdate(id, {$push:{protected_friends: _id} }, {new :true})
      
         res.json({
             post:udpatedfriend,

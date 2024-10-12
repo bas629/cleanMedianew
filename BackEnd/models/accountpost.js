@@ -13,6 +13,16 @@ const userSchema = new mongoose.Schema({
 		type:String,
 		required: true,
 	},
+	profile_url: {
+		type:String,
+		required: true,
+	
+	},
+	date: {
+		type:Date,
+		required: true,
+		default: Date.now(),
+	},
     private_Post: [{
 		title:{
 			type:String,
@@ -26,6 +36,11 @@ const userSchema = new mongoose.Schema({
 	post_url:{
 			type:String,
 		required: true,
+		},
+		date: {
+			type:Date,
+			required: true,
+			default: Date.now(),
 		} 
 
 	}],
@@ -42,6 +57,11 @@ const userSchema = new mongoose.Schema({
 	post_url:{
 			type:String,
 		required: true,
+		} ,
+		date: {
+			type:Date,
+			required: true,
+			default: Date.now(),
 		} 
 
 	}],
@@ -58,7 +78,13 @@ const userSchema = new mongoose.Schema({
 	post_url:{
 			type:String,
 		required: true,
+		} ,
+		date: {
+			type:Date,
+			required: true,
+			default: Date.now(),
 		} 
+
 
 	}],
 	private_friends:[
