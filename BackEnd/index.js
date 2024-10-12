@@ -1,6 +1,6 @@
 const express = require('express');
-
-
+require("dotenv").config();
+const port=process.env.PORT || 2000
 const cors=require('cors'); 
 const app = express(); 
 app.use(cors());
@@ -18,6 +18,6 @@ app.use(express.json());
 dbConnect();
 app.use(userRoutes);
  
-app.listen(2000,()=>{
-console.log('server  Stated at port 4000');
+app.listen(port,()=>{
+console.log(`server  Stated at port ${port}`);
 })

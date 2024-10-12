@@ -1,6 +1,6 @@
 const moongoose = require('mongoose');
  
-require("dotenv").config();
+    require("dotenv").config();
 const   dbConnection  = ()=>{
  try{
  moongoose.connect(process.env.MONGO_DB)
