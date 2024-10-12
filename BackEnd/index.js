@@ -1,7 +1,8 @@
 const express = require('express');
+const cors=require('cors'); 
 require("dotenv").config();
 const port=process.env.PORT || 2000
-const cors=require('cors'); 
+
 const app = express(); 
 app.use(cors());
 const cloudinary = require('cloudinary');
